@@ -5,8 +5,8 @@ from openpyxl.styles import Alignment
 
 WEEK_DAY = {"Lunedì": "A", "Martedì": "B", "Mercoledì": "C", "Giovedì": "D", "Venerdì": "E"}
 LESS_TO_COL = {}
-COLOR = ["FFE699", "66CDAA", "DEB887", "DDA0DD", "D3D3D3"]
-
+COLOR = ["CCC0DA", "B7DEE8", "FCD5B4", "DDA0DD", "D3D3D3"]
+TEXT_PATH = "file.txt"
 
 def input_string(path):
     txt = open(path, "r").read()
@@ -106,7 +106,7 @@ def create_table(lessons):
 
 
 def main():
-    text = input_string("txt.txt")
+    text = input_string(TEXT_PATH)
     print(text)
     lessons = extrapolate(text)
     # print(lessons) # DEBUG
